@@ -49,3 +49,4 @@ if fichas <= 0:
 #Pass Line Bet
 
 #Teste github
+print("Teste github")
