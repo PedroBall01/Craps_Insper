@@ -35,8 +35,10 @@ while fichas > 0:
         print("dado 2: {}".format(dado_2))
         if lancamento == 7 or lancamento == 11: 
             fichas = fichas + aposta
+            print("Boa!")
         elif lancamento == 2 or lancamento == 3 or lancamento == 12:
             fichas = fichas - aposta
+            print("feels bad man!")
        
         # Inicio do 'Point'      
         else:
@@ -57,13 +59,17 @@ while fichas > 0:
                 while i:
                     dado_em_repeticao_1 = random.randint(1,6)
                     dado_em_repeticao_2 = random.randint(1,6)
+                    print("dado novo 1: {}".format(dado_em_repeticao_1))
+                    print("dado novo 2: {}".format(dado_em_repeticao_2))
                     lancamento_novo = dado_em_repeticao_1 + dado_em_repeticao_2
                     if lancamento_novo == lancamento or lancamento_novo == 7:
                         i = False
                 if lancamento_novo == lancamento:
                     fichas = fichas + re_aposta
+                    print("Boa!")
                 elif lancamento_novo == 7:
                     fichas = fichas - re_aposta
+                    print("feels bad man!")
            
             # Aposta 'Field' no Point         
             elif opcao_nova == "Field":
@@ -72,12 +78,16 @@ while fichas > 0:
                 print("dado 2: {}".format(dado_novo_2))
                 if lancamento_soma_dados == 5 or lancamento_soma_dados == 6 or lancamento_soma_dados == 7 or lancamento_soma_dados == 8:
                     fichas = fichas - re_aposta
+                    print("feels bad man!")
                 elif lancamento_soma_dados == 2:
                     fichas = fichas + 2*re_aposta
+                    print("Boa!")
                 elif lancamento_soma_dados == 12:
                     fichas = fichas + 3*re_aposta
+                    print("Boa!")
                 else:
                     fichas = fichas + re_aposta
+                    print("Boa!")
            
             # Aposta 'Any Craps' no Point
             elif opcao_nova == "Any Craps":
@@ -86,18 +96,22 @@ while fichas > 0:
                 print("dado 2: {}".format(dado_novo_2))
                 if lancamento == 2 or lancamento == 3 or lancamento == 12:
                     fichas = fichas + 7*(re_aposta)
+                    print("Boa!")
                 else:
                     fichas = fichas - re_aposta
-            # Aposta 'Twelve' no Point
+                    print("feels bad man!")
            
+            # Aposta 'Twelve' no Point           
             elif opcao_nova == "Twelve":
                 re_aposta = int(input("Quanto quer apostar agora? : "))
                 print("dado 1: {}".format(dado_novo_1))
                 print("dado 2: {}".format(dado_novo_2))
                 if lancamento == 12:
                     fichas = fichas + 30*re_aposta
+                    print("Boa!")
                 else:
                     fichas = fichas - re_aposta
+                    print("feels bad man!")
    
     # Aposta - Twelve no Come Out 
     elif opcao == "Twelve":
@@ -106,8 +120,10 @@ while fichas > 0:
         print("dado 2: {}".format(dado_2))
         if lancamento == 12:
             fichas = fichas + 30*aposta
+            print("Boa!")
         else:
             fichas = fichas - aposta
+            print("feels bad man!")
     
     # Aposta - Field no Come Out
     elif opcao == "Field":
@@ -116,12 +132,16 @@ while fichas > 0:
         print("dado 2: {}".format(dado_2))
         if lancamento == 5 or lancamento == 6 or lancamento == 7 or lancamento == 8:
             fichas = fichas - aposta
+            print("feels bad man!")
         elif lancamento == 2:
             fichas = fichas + 2*aposta
+            print("Boa!")
         elif lancamento == 12:
             fichas = fichas + 3*aposta
+            print("Boa!")
         else:
             fichas = fichas + aposta
+            print("Boa!")
     
     # Aposta - Any Craps no Come Out
     elif opcao == "Any Craps":
@@ -130,8 +150,10 @@ while fichas > 0:
         print("dado 2: {}".format(dado_2))
         if lancamento == 2 or lancamento == 3 or lancamento == 12:
             fichas = fichas + 7*(aposta)
+            print("Boa!")
         else:
             fichas = fichas - aposta
+            print("feels bad man!")
    
     #Parando
     elif opcao == "Pare":
