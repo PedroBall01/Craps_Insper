@@ -50,3 +50,4 @@ if fichas <= 0:
 
 #Teste github
 print("Teste github")
+print("teste github2")
